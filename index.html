@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="generatePDF()">Pdf</button>
+</body>
+<!-- <script src="app.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"
+    integrity="sha512-a9NgEEK7tsCvABL7KqtUTQjl69z7091EVPpw5KxPlZ93T141ffe1woLtbXTX+r2/8TtTvRX/v4zTL2UlMUPgwg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+
+    var dd = {
+        content: [
+            'First paragraph',
+            'Another paragraph, this time a little bit longer to make sure, this line will be divided into at least two lines'
+        ]
+
+    }
+    pdfMake.createPdf(dd).open();
+    
+</script>
+
+</html>
